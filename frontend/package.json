@@ -1,0 +1,14 @@
+{
+	"name": "weatherapp-frontend",
+	"version": "1.0.0",
+	"description": "Frontend for Weather App",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Przemysław Krawczyk",
+	"license": "MIT",
+	"devDependencies": {
+		"eslint": "^8.33.0"
+	}
+}
