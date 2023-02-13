@@ -5,6 +5,39 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Weather App</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script defer type="module" src="./app.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<header>
+			<nav>
+				<a href="#">
+					<img src="./images/BioWeather_Logo.png" alt="BioWeather Logo Image" />
+				</a>
+				<h1>BioWeather</h1>
+			</nav>
+		</header>
+		<main>
+			<section class="weather">
+				<form class="weatherSearch">
+					<input
+						autocomplete="off"
+						type="text"
+						class="weatherSearch__cityName"
+						id="searchInput"
+						placeholder="Search city"
+						required
+					/>
+					<button class="weatherSearch__searchBtn" type="submit">
+						<span
+							class="weatherSearch__searchBtn weatherSearch__searchBtn--icon"
+						>
+							<img src="./images/searchBtn_icon.png" />
+						</span>
+					</button>
+					<ul class="citySuggestions"></ul>
+				</form>
+			</section>
+		</main>
+	</body>
 </html>
