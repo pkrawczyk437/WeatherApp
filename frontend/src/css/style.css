@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+	--primary: #fff;
+	--secondary: #333;
+	--fwExtraLight: 200;
+	--fwRegular: 400;
+	--fwMedium: 500;
+	--fwBold: 700;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/app_background.png') 10% 80% / auto no-repeat;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 40px;
+}
+
+nav > h1 {
+	font-size: 1.5rem;
+	color: var(--primary);
+	font-weight: var(--fwRegular);
+}
+
+main {
+	min-height: 100vh;
+}
+
+.weatherSearch {
+	display: flex;
+	font-weight: var(--fwExtraLight);
+	font-size: 12px;
+	color: var(--primary);
+	background: none;
+	border: 1px solid #c2c2c2;
+	border-radius: 10px;
+	width: 20rem;
+	padding: 0.75rem;
+	margin: 0 auto;
+	position: relative;
+}
+
+.weatherSearch:focus-within {
+	outline: 1px solid var(--primary);
+}
+
+.weatherSearch__cityName {
+	border: none;
+	background: none;
+	font-size: 12px;
+	flex-grow: 1;
+	color: var(--primary);
+}
+
+.weatherSearch__cityName:focus {
+	outline: none;
+}
+
+.weatherSearch__cityName::placeholder {
+	color: #c2c2c2;
+}
+.weatherSearch__cityName:focus::placeholder {
+	color: transparent;
+}
+
+.weatherSearch__searchBtn {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	transition: transform 2s ease-in-out;
+}
+
+.citySuggestions {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	list-style-type: none;
+	left: 0;
+	background-color: var(--primary);
+	color: var(--secondary);
+	border-radius: 10px;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.3s ease-in-out;
+}
+
+.citySuggestions__item {
+	padding: 1rem;
+	margin: 0.5rem;
+	border-radius: 10px;
+}
+
+.citySuggestions__item:hover {
+	background-color: var(--secondary);
+	color: var(--primary);
+}
+
+.citySuggestions.citySuggestions--active {
+	transform: scaleY(1);
+	transition: transform 0.3s ease-in-out;
+}
+
+.weatherDashboard__current {
+	border: 2px solid #fff;
+}
